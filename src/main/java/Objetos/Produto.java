@@ -87,7 +87,7 @@ public class Produto {
      * @return the valorTotal
      */
     public double getValorTotal() {
-        return valorTotal;
+        return valorTotal = qntProdutos * valUnitario;
     }
 
     /**

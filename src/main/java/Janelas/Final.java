@@ -37,6 +37,7 @@ Produto prod = new Produto();
                jLValorUnitario.setText(String.valueOf(prod.getValUnitario()));
                jLQntProdutos.setText(String.valueOf(prod.getQntProdutos()));
                jLFornecedor.setText(prod.getFornecedor());
+               jLValorTotal.setText(String.valueOf(prod.getValorTotal()));
     }
     
     /**
@@ -72,6 +73,8 @@ Produto prod = new Produto();
         jLValorUnitario = new javax.swing.JLabel();
         jLQntProdutos = new javax.swing.JLabel();
         jLFornecedor = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLValorTotal = new javax.swing.JLabel();
 
         jLabel12.setText("jLabel12");
 
@@ -160,6 +163,13 @@ Produto prod = new Produto();
 
         jLabel11.setText("Fornecedor");
 
+        jLabel13.setText("Valor Total");
+        jLabel13.addContainerListener(new java.awt.event.ContainerAdapter() {
+            public void componentAdded(java.awt.event.ContainerEvent evt) {
+                jLabel13ComponentAdded(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -176,6 +186,10 @@ Produto prod = new Produto();
                         .addComponent(jLFornecedor))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel13)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLValorTotal))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel8)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -212,7 +226,14 @@ Produto prod = new Produto();
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(jLFornecedor))
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLValorTotal))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(14, 14, 14))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -238,6 +259,10 @@ Produto prod = new Produto();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel13ComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_jLabel13ComponentAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel13ComponentAdded
 
     /**
      * @param args the command line arguments
@@ -284,11 +309,13 @@ Produto prod = new Produto();
     private javax.swing.JLabel jLQntProdutos;
     private javax.swing.JLabel jLRazaoSocial;
     private javax.swing.JLabel jLTelefone;
+    private javax.swing.JLabel jLValorTotal;
     private javax.swing.JLabel jLValorUnitario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
